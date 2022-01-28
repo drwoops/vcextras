@@ -1,0 +1,10 @@
+name: vcextras
+version: '${project.version}'
+main: me.drwoops.vcextras.Vcextras
+api-version: 1.18
+authors: [ drwoops ]
+description: approved extras for use on the vintagecraft server
+commands:
+  vc:
+    description: use /vc help for information about subcommands
+    usage: /<command> subcommand args...
