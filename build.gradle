@@ -3,7 +3,14 @@ plugins {
 }
 
 group = 'me.drwoops'
-version = '1.0'
+
+ext {
+    vcextras_version = '1.0'
+    minecraft_version = '1.18.2'
+    paper_api_version = 'R0.1-SNAPSHOT'
+}
+
+version = "${vcextras_version}-${minecraft_version}"
 
 repositories {
     mavenCentral()
@@ -18,7 +25,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT'
+    compileOnly "io.papermc.paper:paper-api:${minecraft_version}-${paper_api_version}"
 }
 
 def targetJavaVersion = 17
@@ -38,7 +45,7 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 processResources {
-    def props = [version: version]
+    def props = [version: "${vcextras_version}"]
     inputs.properties props
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
