@@ -1,5 +1,5 @@
 name: vcextras
-version: '${project.version}'
+version: '${version}'
 main: me.drwoops.vcextras.Vcextras
 api-version: 1.18
 authors: [ drwoops ]
