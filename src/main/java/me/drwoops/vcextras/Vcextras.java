@@ -20,6 +20,7 @@ package me.drwoops.vcextras;
 
 import me.drwoops.vcextras.commands.AdventuringCommand;
 import me.drwoops.vcextras.commands.HelpCommand;
+import me.drwoops.vcextras.commands.TodoCommand;
 import me.drwoops.vcextras.commands.VcCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -38,12 +39,14 @@ public final class Vcextras extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        getConfig().options().copyDefaults(true);
+        saveDefaultConfig();
         subcommands = new HashMap<String, VcCommand>();
         getCommand("vc").setExecutor(this);
         getCommand("vc").setTabCompleter(this);
         subcommands.put("help", new HelpCommand(this));
-        subcommands.put("adventuring", new AdventuringCommand((this)));
-
+        //subcommands.put("adventuring", new AdventuringCommand(this));
+        subcommands.put("todo", new TodoCommand(this));
     }
 
     @Override

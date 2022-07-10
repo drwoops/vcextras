@@ -1,0 +1,5 @@
+subcommands:
+  todo:
+    allow-all: false
+    allowed:
+      - "minecraft:adventure/adventuring_time"

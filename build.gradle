@@ -5,7 +5,7 @@ plugins {
 group = 'me.drwoops'
 
 ext {
-    vcextras_version = '1.0'
+    vcextras_version = '1.1'
     minecraft_version = '1.19'
     paper_api_version = 'R0.1-SNAPSHOT'
 }
